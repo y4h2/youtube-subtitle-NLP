@@ -1,1 +1,3 @@
 youtube-dl
+nltk
+numpy

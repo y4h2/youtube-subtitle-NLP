@@ -18,3 +18,15 @@ used in the project:
     subtitlesformat:   The format code for subtitles
     subtitleslangs:    List of languages of the subtitles to download
     skip_download:     Skip the actual download of the video file
+
+# Covered Algorithms
+
+## Sentiment Analysis
+- statistic based
+- rule based
+
+## Name Entity Detect
+
+
+## Topic detect
+LDA http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.LatentDirichletAllocation.html
