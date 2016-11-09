@@ -90,3 +90,4 @@ ENV/
 
 # subtitles
 resources/subtitles/
+!resources/subtitles/.gitkeep
