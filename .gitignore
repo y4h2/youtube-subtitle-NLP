@@ -89,5 +89,5 @@ ENV/
 .ropeproject
 
 # subtitles
-resources/subtitles/
+resources/subtitles/*
 !resources/subtitles/.gitkeep
