@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 from __future__ import unicode_literals
 import youtube_dl
-
+import sys
 
 class MyLogger(object):
     def debug(self, msg):
@@ -42,14 +42,15 @@ def subtitle_downloader(link):
         'skip_download': True,
         # 'allsubtitles': True,
         'writesubtitles': True,
+        # 'writeautomaticsub': True,
         'outtmpl': subtitle_path + subtitle_tmpl, #DEFAULT_OUTTMPL = '%(title)s-%(id)s.%(ext)s'
     }
     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
         ydl.download([link]) #the id should be exactly 11 characters
 
 if __name__ == '__main__':
-    link = 'https://www.youtube.com/watch?v=n5sB19UTcdA'
-    subtitle_downloader(link)
+    # link = 'https://www.youtube.com/watch?v=Ye8mB6VsUHw'
+    subtitle_downloader(str(sys.argv[1]))
     # https://www.youtube.com/watch?v=Ye8mB6VsUHw
     # no subtitle
     # https://www.youtube.com/watch?v=n5BB19UTcdA
