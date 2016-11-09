@@ -1,0 +1,1 @@
+youtube-dl --sub-format vtt --sub-lang en --all-sub --skip-download https://www.youtube.com/watch?v=Ye8mB6VsUHw --output "%(title)s.%(ext)s"
