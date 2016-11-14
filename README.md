@@ -53,6 +53,18 @@ used in the project:
   much cleaner than tweet data  
   a set of 25,000 highly polar movie reviews for training, and 25,000 for testing. 
 
+- nltk.corpus.movie_reviews  
+  paragraph level labelled data  
+  1000 positive movie reviews and 1000 negtive movie reviews  
+  easy to use, but it has less data
+
+- https://archive.ics.uci.edu/ml/datasets/Sentiment+Labelled+Sentences
+  sentence level dataset  
+  Score: 1 (positive) or 0 (negative)
+  Source: imdb.com, amazon.com, yelp.com. Each website, 500 positive and 500 negative sentences. The text sentences are extracted from reviews of products, movies, and restaurants.
+
+
+
 ## Twitter sentiment dataset
 - keep the sentiment and content column
 - remove @... tag
@@ -73,7 +85,66 @@ used in the project:
 ## Naive Bayes algorithm
 calculate the probility of the occurance of the sentiment word. Every word appear in the positive and negative with probility, based on this probility, the model can predict the sentiment of a sentence with all words in it.
 
+Can provide both sentence and paragraph level sentiment analysis
+
 ## VADER
+rule-based algorithm
+
+## CoreNLP
+only provide sentence level classify
+
+API: https://algorithmia.com/algorithms/nlp/SentimentAnalysis  
+Pricing: 10k calls = $1.08 USD
+
+OR
+
+use py-corenlp
+```sh
+
+```
+
+
+## Evaluation Result
+### CoreNLP
+**Sentence Level**
+
+Amazon Evaluation  
+0.75769186114
+0.679
+
+
+Amazon Evaluation  
+0.721432519418
+0.645
+
+
+Amazon Evaluation  
+0.752129223853
+0.69
+
+### VADER
+**Sentence Level**
+
+Amazon Evaluation  
+0.75769186114
+0.679
+
+
+Yelp Evaluation  
+0.721432519418
+0.645
+
+
+Imdb Evaluation  
+0.752129223853
+0.69
+
+**Paragraph Level**
+
+Movie Review Evaluation  
+0.622662172869
+0.6365
+
 
 # Named Entity Recognizer (NER)
 The technique is already mature
@@ -82,7 +153,7 @@ The technique is already mature
 ## RAKE
 
 ## TextRank
-
+graph-based algorithm
 
 
 # Benchmark
